@@ -1,10 +1,13 @@
 import { render } from 'react-dom';
-import './style.scss';
-import style from './index.module.scss';
+import { App } from './app';
+import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from './theme/theme-provider';
 
 render(
-	<h1>
-		Hello World! <span className={style.span}>no</span>
-	</h1>,
+	<BrowserRouter>
+		<ThemeProvider>
+			<App />
+		</ThemeProvider>
+	</BrowserRouter>,
 	document.getElementById('root'),
 );
