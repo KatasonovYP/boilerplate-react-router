@@ -4,7 +4,7 @@ import {
 	Theme,
 	ThemeContext,
 	ThemeContextProps,
-} from '../config/theme-context';
+} from 'shared/config';
 
 interface UseThemeResult {
 	theme: Theme;
