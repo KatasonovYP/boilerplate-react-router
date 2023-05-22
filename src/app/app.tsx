@@ -1,15 +1,8 @@
-import { FC, Suspense, useContext } from 'react';
+import { FC, Suspense } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
-import { Home } from './pages/home';
-import { About } from './pages/about';
+import { About, Home } from 'pages';
 import './styles/index.scss';
-import {
-	LOCAL_STORAGE_THEME_KEY,
-	Theme,
-	ThemeContext,
-} from './theme/theme-context';
-import { useTheme } from './theme/use-theme';
-import { classNames } from './lib/class-names';
+import { classNames, useTheme } from 'shared/lib';
 
 export const App: FC = () => {
 	const { theme, toggleTheme } = useTheme();
