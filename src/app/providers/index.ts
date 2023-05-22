@@ -1,1 +1,3 @@
-export { ThemeProvider } from 'app/providers/theme-provider';
+export { AppRouter } from './router';
+
+export { ThemeProvider } from './theme';

@@ -1,2 +1,2 @@
-export { Home } from 'pages/home';
-export { About } from 'pages/about';
+export { Home } from './home';
+export { About } from './about';

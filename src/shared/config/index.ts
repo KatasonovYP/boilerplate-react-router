@@ -1,1 +1,1 @@
-export { ThemeContext } from 'shared/config/theme-context';
+export { ThemeContext } from './theme-context';

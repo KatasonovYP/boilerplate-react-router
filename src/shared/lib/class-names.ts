@@ -9,7 +9,7 @@ export function classNames(
 		cls,
 		...additional,
 		Object.entries(mods)
-			.filter(([className, value]) => !!value)
+			.filter(([_, value]) => !!value)
 			.map(([className]) => className),
 	].join(' ');
 }

@@ -1,8 +1,8 @@
-import { FC, Suspense } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
-import { About, Home } from 'pages';
+import { FC } from 'react';
+import { Link } from 'react-router-dom';
 import './styles/index.scss';
 import { classNames, useTheme } from 'shared/lib';
+import { AppRouter } from 'app/providers';
 
 export const App: FC = () => {
 	const { theme, toggleTheme } = useTheme();
@@ -12,19 +12,8 @@ export const App: FC = () => {
 				<Link to={'/'}>Home</Link>
 				<Link to={'/about'}>About</Link>
 				<button onClick={toggleTheme}>theme</button>
+				<AppRouter />
 			</nav>
-			<Suspense fallback={<h1>Loading</h1>}>
-				<Routes>
-					<Route
-						path='/'
-						element={<Home />}
-					/>
-					<Route
-						path='/about'
-						element={<About />}
-					/>
-				</Routes>
-			</Suspense>
 		</div>
 	);
 };
